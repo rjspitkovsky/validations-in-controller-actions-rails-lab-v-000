@@ -4,6 +4,7 @@ class AuthorsController < ApplicationController
   end
 
   def new
+    @author = Author.new 
   end
 
   def create
@@ -13,7 +14,7 @@ class AuthorsController < ApplicationController
       redirect_to author_path(@author)
     else
       render :new
-    end 
+    end
   end
 
   private
